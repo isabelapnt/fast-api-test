@@ -4,5 +4,10 @@ app = FastAPI()
 
 
 @app.get("/")
-async def root():
+def root():
     return {"message": "Hello World"}
+
+
+@app.get("/params/{params}")
+def read_params(params):
+    return {"params": params}
