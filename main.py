@@ -9,5 +9,5 @@ def root():
 
 
 @app.get("/params/{params}")
-def read_params(params):
+def read_params(params: str):
     return {"params": params}
